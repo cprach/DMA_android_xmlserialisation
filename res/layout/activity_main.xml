@@ -1,16 +1,89 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.computerpower.student.xmlserialisation.MainActivity" >
+    android:layout_height="wrap_content"
+    android:layout_margin="25dp"
+    android:orientation="vertical" >
 
     <TextView
+        android:id="@+id/txtMainLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/label_main"
+        android:textSize="24sp" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lblPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_playername"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_playername"
+            android:textSize="18sp" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lblPlayerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_playerscore"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtPlayerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_playerscore"
+            android:textSize="18sp" 
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/btnAddPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addPlayer"
+            android:text="@string/btn_addplayer"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnStoreData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="storeData"
+            android:text="@string/btn_storedata"
+            android:textSize="20sp" />
+        
+        <Button
+            android:id="@+id/btnRetrieveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="retrieveData"
+            android:text="@string/btn_retrievedata"
+            android:textSize="20sp" />
+        
+    </LinearLayout>
+
+</LinearLayout>
